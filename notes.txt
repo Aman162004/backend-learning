@@ -33,3 +33,85 @@ we can check in package.json dependencies
 DATABASE IS ALWAYS STORED IN ANOTHER CONTINENT-----> QUOTE
 THERE CAN BE MANY ERRORS IN COMMUNICATING WITH DATABASE, TO AVOID IT WE USE ASYNC, FETCH LIKE ";(async()=>{})()"
 
+
+
+now we will install. cokkie-parser and cors 
+command - "npm i cookie-parser cors"
+
+app.use is used to get middlewares and configurations
+app.use(cors({
+    here we will give acess to database whom we want
+}))
+
+
+app.use(express.json({limit:"10kb"}))
+like this we will set the limit to json files
+
+app.use(express.urlencoded({extended: true, limit: "10kb"}))
+it is used to take data from URLs
+
+
+app.use(express.static("public"))
+in this we give access to data to public and here public is the name of the folders
+
+
+
+
+
+Utility folder asynkHandeling files
+const connectDB = async () =>{
+    try {
+        const connectionInstance = await mongoose.connect
+        (`${process.env.MONGODB_URI}/${DB_NAME}`)
+        console.log(`\n MongoDB connected !! DB HOST: ${connectionInstance.connection.host}`);
+        
+    } catch (error){
+        console.log("MongoDB connection error",error);
+        process.exit(1)
+    }
+}
+
+we need to write this again and again so in place of that we will create a util file and declare it there
+after declaring we will call it
+
+
+
+In place of above code we can 
+const asyncHandler = () => {
+    (res,req,next)=>{
+        Promise.resolve(requestHandler(req, res, next)).catch((err) => next(err))
+    }
+}
+
+export {asyncHandler}
+
+
+
+For API ERROR
+This is a custom error class that extends the built-in JavaScript Error class. Let me explain its components and suggest some improvements.
+
+Current Implementation Analysis
+Class Structure
+Constructor Parameters
+statusCode: HTTP status code for the error
+message: Error message (defaults to "Something went wrong")
+error: Array to store error details (defaults to empty array)
+statck: Stack trace (note: there's a typo in 'statck')
+Properties
+statusCode: Stores the HTTP status code
+data: Set to null (but not using the passed error array)
+HTTP Status Codes
+
+Use appropriate status codes
+400: Bad Request
+401: Unauthorized
+403: Forbidden
+404: Not Found
+500: Internal Server Error
+Error Handling
+
+Implement with try-catch blocks
+Use with async error handlers
+Include in global error middleware
+This custom error class is essential for consistent error handling across your API application.
+
