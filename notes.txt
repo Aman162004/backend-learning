@@ -6,3 +6,10 @@ to Install nodemon we will use command "npm i -D nodemon"
 
 we will controllers and middleware in database which will keep check on who is accessing
 its code "mkdir controllers db middleware models routes utils
+
+
+we will install prettier so that while working in group in there should be no conflict in code
+like spacing, anyone left semi colne or commas
+command line "npm i -D prettier"
+after running this command we need add some files mannualy to use it like .prettierrc,.prettierignore
+in .prettierignore we will write names of all files/folders in which we don't want prettier to implement
