@@ -2,9 +2,10 @@
   "name": "backend-learning",
   "version": "1.0.0",
   "description": "backend learning",
+  "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon -r dotenv/config --experimental-json-modules src/index.js"
   },
   "keywords": [
     "javascript",
@@ -13,7 +14,13 @@
   "author": "\"Aman Raj\",",
   "license": "ISC",
   "devDependencies": {
+    "@types/express": "^5.0.3",
     "nodemon": "^3.1.10",
     "prettier": "^3.6.2"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0",
+    "express": "^5.1.0",
+    "mongoose": "^8.16.4"
   }
 }
