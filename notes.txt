@@ -1,0 +1,4 @@
+we will use .gitignore generator to generate the code of .gitignore
+
+For not restarting node we will use nodemon, it will automatically restart the server
+to Install nodemon we will use command "npm i -D nodemon"
