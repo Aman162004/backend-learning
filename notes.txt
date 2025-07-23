@@ -115,3 +115,27 @@ Use with async error handlers
 Include in global error middleware
 This custom error class is essential for consistent error handling across your API application.
 
+
+
+
+Mongoose Aggregate Paginate Explanation
+Mongoose Aggregate Paginate is a powerful plugin that adds pagination 
+support to MongoDB aggregation operations. It's particularly useful when you need 
+to paginate the results of complex aggregation pipelines.
+Features and Benefits
+Pagination Support
+
+page: Current page number
+limit: Number of documents per page
+sort: Sorting options
+Code to install mongoose Aggregate paginate
+command -- "npmi mongoose-aggregate-paginate-v2"
+
+
+bcrypt is used to encode and decode the password
+command- "npm install bcrypt"
+
+now we will install jsonwebtokens to hash code
+command- "npm install jsonwebtoken"
+
+
