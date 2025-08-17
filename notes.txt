@@ -139,3 +139,74 @@ now we will install jsonwebtokens to hash code
 command- "npm install jsonwebtoken"
 
 
+What is Http headers?
+HTTP headers are key-value pairs of metadata exchanged between a client (e.g., a web browser)
+and a server during an HTTP communication. They are sent at the beginning of an HTTP request or response,
+preceding the message body, and provide essential information about the communication or the resource being transferred.
+
+MetaData - key value sent alomg with request and response. It can error also like server not found.
+Request Header --> from client
+Response Header --> from Server
+Representation Header --> encoding/compression. (used to send lot of data in compressed format)
+Payload Headers --> data
+Security Header
+
+
+Most common Headers
+1. Accept: application/json
+2. Agent 
+3. Authentication 
+4. Content type
+5. cookie
+6. Cache Control 
+
+
+there are some mores Headers to which is used in Production grade companies 
+CORS 
+Access-Control-Allow-Origin
+Access-Control-Allow-Credentials
+Access-Control-Allow-Methods
+
+Security
+Cross-Origin-Embedded-Policy
+Cross-Origin-Opener-Policy
+Content-Security-Policy
+X-XSS-Protection
+
+
+
+HTTP Methods
+Basic set of operations that can be used to interact eith the server 
+1. GET : retrive a resource
+2. HEAD : No message body (response headers only)
+3. OPTIONS : what operations are available 
+4. TRACE : loopback test (get some data)
+5. DELETE : remove a resource 
+6. PUT : replace a resource 
+7. POST : interact with resource (mostly add)
+8. PATCH ; Change part of a resource
+
+
+HTTP Status Code
+1XX --> information
+2XX --> Success
+3XX --> Redirection
+4XX --> Client Error
+5XX --> Server Error
+
+Example
+100 --> Continue
+102 --> Processing
+200 --> OK
+201 --> created
+202 --> Accepted
+307 --> Temprory Redirect
+308 --> Permanent Redirect
+400 --> Bad Request
+401 --> Unauthorized
+402 --> Payment Required
+404 --> Not Found
+500 --> Internal Server Error
+504 --> Gateway timeOut
+
+
